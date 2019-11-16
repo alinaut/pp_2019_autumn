@@ -103,6 +103,7 @@ std::vector<double> parallelGauss(const std::vector<double> &a, int rows, int co
             x[i] = b / res[i * cols + i];
         }
     }
+    
     return x;
 }
 
