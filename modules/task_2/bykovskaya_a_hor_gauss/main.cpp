@@ -81,7 +81,7 @@ TEST(Hor_Gauss_MPI, Test_3x4_Parallel_vc_Not_Parallel) {
 
     if (rank == 0) {
         a = {
-        	1, 2, 3, 8,
+            1, 2, 3, 8,
             2, 6, 8, 12,
             3, 8, 12, 16
         };
