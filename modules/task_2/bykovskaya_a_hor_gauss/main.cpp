@@ -76,11 +76,15 @@ TEST(Hor_Gauss_MPI, Test_3x4_Parallel_vc_Not_Parallel) {
     int rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     std::vector<double> a;
-    const int rows = 2;
-    const int cols = 3;
+    const int rows = 3;
+    const int cols = 4;
 
     if (rank == 0) {
-        a = {4, 2, -1, 1, 5, 3, -2, 2, 3, 2, -3, 0};
+        a = {
+        	1, 2, 3, 8,
+            2, 6, 8, 12,
+            3, 8, 12, 16
+        };
     }
     std::vector <double> ans = parallelGauss(a, rows, cols);
 
@@ -95,8 +99,8 @@ TEST(Hor_Gauss_MPI, Test_4x5_Parallel_vc_Not_Parallel) {
     int rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     std::vector<double> a;
-    const int rows = 2;
-    const int cols = 3;
+    const int rows = 4;
+    const int cols = 5;
 
     if (rank == 0) {
         a = {

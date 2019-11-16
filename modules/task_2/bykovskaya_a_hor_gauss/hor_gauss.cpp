@@ -76,6 +76,18 @@ std::vector<double> parallelGauss(const std::vector<double> &a, int rows, int co
         }
     }
 
+    int root = 0;
+    for (int i = displs[rank] / cols + sendcounts[rank] / cols; i < rows; ++i) {
+        int sum = 0;
+        for (int j = 0; j < size; ++j, ++root) {
+            sum += sendcounts[j] / cols;
+            if (i < sum) {
+                root = j; break;
+            }
+        }
+        MPI_Bcast(&pivRow[0], cols, MPI_DOUBLE, root, MPI_COMM_WORLD);
+    }
+
     std::vector<double> res(0);
     if (rank == 0) res.resize(rows * cols);
     MPI_Gatherv(loc.data(), tmp * cols, MPI_DOUBLE, res.data(),
