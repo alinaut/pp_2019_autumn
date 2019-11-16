@@ -94,7 +94,8 @@ std::vector<double> parallelGauss(const std::vector<double> &a, int rows, int co
     return x;
 }
 
-std::vector<double> Gauss(const std::vector<double> &a, int rows, int cols) {
+std::vector<double> Gauss(const std::vector<double> &b, int rows, int cols) {
+    std::vector <double> a(b);
     for  (int i = 0; i < rows; ++i) {
         for (int j = i + 1; j < rows; ++j) {
             double b = a[i * cols  + i] / a[j * cols + i];
