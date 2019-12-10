@@ -2,6 +2,7 @@
 #include <gtest-mpi-listener.hpp>
 #include <gtest/gtest.h>
 #include <vector>
+
 #include "./moors_algorithm.h"
 
 TEST(Moors_Algorithm_MPI, Cant_Find_If_Incorrect_Source_Seq) {

@@ -1,9 +1,11 @@
 // Copyright 2019 Bykovskaya Alina
-#include "mpi.h"
-#include <cstdlib>
+#include <mpi.h>
 #include <random>
+
 #include <ctime>
 #include <vector>
+#include <stdexcept>
+#include <algorithm>
 #include "../../../modules/task_3/bykovskaya_a_moors_algorithm/moors_algorithm.h"
 
 static int offset = 0;
