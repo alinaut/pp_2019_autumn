@@ -6,6 +6,7 @@
 #include <vector>
 #include <stdexcept>
 #include <algorithm>
+#include <limits>
 #include "../../../modules/task_3/bykovskaya_a_moors_algorithm/moors_algorithm.h"
 
 static int offset = 0;
