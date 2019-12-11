@@ -2,6 +2,8 @@
 #include <mpi.h>
 #include <random>
 
+#include <cstdlib>
+#include <iomanip>
 #include <ctime>
 #include <vector>
 #include <stdexcept>
