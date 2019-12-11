@@ -12,7 +12,7 @@
 #include "../../../modules/task_3/bykovskaya_a_moors_algorithm/moors_algorithm.h"
 
 static int offset = 0;
-const int INF = INT_MAX;
+const int INF = 2000000000;
 
 std::vector<int> getRandomGraph(int size) {
     std::mt19937 gen;
